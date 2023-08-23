@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int xorOperation(int n, int start) {
+        int ans = start;
+        int i = 0;
+        while(i<n-1)
+        {
+           
+            start+=2;
+            ans=ans^start;
+            cout<<ans<<" ";
+            i++;
+            
+        }
+        return ans;
+        
+    }
+};
