@@ -1,0 +1,35 @@
+class Solution {
+public:
+    bool detectCapitalUse(string word) {
+        int n = word.size();
+        int cap = 0;
+        int not_cap = 0;
+        int first_letter = 0;
+        if(word[0]<97)
+        {
+            cap++;
+            first_letter++;
+        }
+        else
+        {
+            not_cap++;
+        }
+        for(int i=1;i<n;i++)
+        {
+            if(word[i]>=97)
+            {
+            not_cap++;
+            first_letter++;
+            }
+            else
+            {
+                cap++;
+            }
+        }
+        if(cap==n || not_cap==n || first_letter==n)
+        {
+            return 1;
+        }
+        return 0;
+    }
+};
